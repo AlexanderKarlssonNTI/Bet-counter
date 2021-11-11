@@ -91,6 +91,13 @@ input[type="text"] {
     border-radius: 14px;
 }
 
+#bet-1, #bet-5, #bet-10, #bet-25, #bet-100, #bet-500, #bet-1k, #bet-5k, #bet-10k {
+    outline: none;
+    border: none;
+    color: white;
+
+}
+
 #bet-1 {
     background: transparent url('img/chip1.png') no-repeat top left;
     background-size: contain;
@@ -124,11 +131,13 @@ input[type="text"] {
 #bet-1k {
     background: transparent url('img/chip1k.png') no-repeat top left;
     background-size: contain;
+
 }
 
 #bet-5k {
     background: transparent url('img/chip5k.png') no-repeat top left;
     background-size: contain;
+
 }
 
 #bet-10k {
