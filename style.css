@@ -1,0 +1,138 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #35654d;
+}
+
+input[type="text"] {
+    outline: none;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.chip {
+    width: 38px;
+    height: 38px;
+}
+
+.betting-table {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #704e1b;
+    border: 10px solid rgb(75, 52, 3);
+    border-radius: 20px;
+    padding: 14px;
+    gap: 8px;
+}
+
+.win-options {
+    flex-direction: column;
+    background-color: #a3a3a3;
+    padding: 10px;
+    border: 6px solid rgb(61, 61, 61);
+    border-radius: 14px;
+    display: none;
+    gap: 4px;
+}
+
+.bet-display {
+    width: 390px;
+    background-color: black;
+    border: 5px solid grey;
+    border-radius: 12px;
+}
+
+.bankroll-display {
+    width: 390px;
+    background-color: black;
+    border: 5px solid grey;
+    border-radius: 12px;
+}
+
+.display-text {
+    color: white;
+    text-align: center;
+    margin: 0;
+}
+
+.divider {
+    height: 30px;
+}
+
+.action-btn {
+    height: 30px;
+    width: 150px;
+}
+
+#win-custom {
+    width: 56px;
+}
+
+.start-input {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    background-color: #a3a3a3;
+    padding: 10px;
+    border: 6px solid rgb(61, 61, 61);
+    border-radius: 14px;
+}
+
+#bet-1 {
+    background: transparent url('img/chip1.png') no-repeat top left;
+    background-size: contain;
+}
+
+#bet-5 {
+    background: transparent url('img/chip5.png') no-repeat top left;
+    background-size: contain;
+}
+
+#bet-10 {
+    background: transparent url('img/chip10.png') no-repeat top left;
+    background-size: contain;
+}
+
+#bet-25 {
+    background: transparent url('img/chip25.png') no-repeat top left;
+    background-size: contain;
+}
+
+#bet-100 {
+    background: transparent url('img/chip100.png') no-repeat top left;
+    background-size: contain;
+}
+
+#bet-500 {
+    background: transparent url('img/chip500.png') no-repeat top left;
+    background-size: contain;
+}
+
+#bet-1k {
+    background: transparent url('img/chip1k.png') no-repeat top left;
+    background-size: contain;
+}
+
+#bet-5k {
+    background: transparent url('img/chip5k.png') no-repeat top left;
+    background-size: contain;
+}
+
+#bet-10k {
+    background: transparent url('img/chip10k.png') no-repeat top left;
+    background-size: contain;
+}
+
+

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="divider"></div>
+    <div class="row">
+<!--Bet display-->
+        <div class="bet-display">
+            <h1 class="display-text" id="bet">0</h1>
+        </div>
+    </div>
+    <div class="divider"></div>
+    <div class="divider"></div>
+    <div class="column">
+<!--Bankroll display-->
+        <div class="bankroll-display">
+            <h2 class="display-text" id="bankroll">0</h2>
+        </div>
+        <div class="divider"></div>
+        <div class="column" style="gap: 10px;">
+<!--Win options-->
+            <div class="win-options">
+                <div class="row" style="gap: 4px;"> 
+                    <button id="win-2x">2x</button>
+                    <button id="win-3x">3x</button>
+                </div>
+                <input type="text" placeholder="type here" id="win-custom">
+                <button id="win-confirm">Confirm</button>
+            </div>
+<!--Action buttons-->
+            <button class="action-btn" id="win-btn">Win</button>
+            <button class="action-btn" id="lose-btn">Lose/Fold</button>
+            <button class="action-btn" id="return-btn">Return Bet</button>
+        </div>
+    </div>
+    <div class="divider"></div>
+    <div class="column">
+<!--Betting table-->
+        <div class="betting-table">
+            <h2 id="bet-amount">0</h2>
+            <div class="row" style="gap: 4px;">
+                <button class="chip" id="bet-1">1</button>
+                <button class="chip" id="bet-5">5</button>
+                <button class="chip" id="bet-10">10</button>
+                <button class="chip" id="bet-25">25</button>
+                <button class="chip" id="bet-100">100</button>
+                <button class="chip" id="bet-500">500</button>
+                <button class="chip" id="bet-1k">1k</button>
+                <button class="chip" id="bet-5k">5k</button>
+                <button class="chip" id="bet-10k">10k</button>
+            </div>
+            <div class="row" style="gap: 4px;">
+                <input type="text" placeholder="Custom amount" id="bet-custom">
+                <button id="bet-confirm">Add amount</button>
+                <button id="bet-clear">Clear</button>
+            </div>
+            <div class="row" style="gap: 4px;">
+                <button id="bet-add">Bet/Add to</button>
+                <button id="bet-all">All in</button>
+            </div>
+        </div>
+        <div class="divider"></div>
+<!--Start input-->
+        <div class="start-input">
+            <input type="text" placeholder="Start value" id="start-value">
+            <button id="start-btn">Add amount</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
