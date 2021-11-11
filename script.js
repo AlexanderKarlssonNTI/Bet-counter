@@ -84,7 +84,7 @@ function returnBet() {
 }
 
 function Bet() {
-    if (startValue.value != '' && isNaN(startValue.value) != true && Number.isInteger(parseInt(startValue.value)) == true) {
+    if (toBet.innerHTML != '' && isNaN(toBet.innerHTML) != true && Number.isInteger(parseInt(toBet.innerHTML)) == true) {
         if ((parseInt(bankroll.innerHTML) - parseInt(toBet.innerHTML)) < 0) {
             alert("Error: not enough to bet");
         }
