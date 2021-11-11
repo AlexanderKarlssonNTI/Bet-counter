@@ -9,6 +9,10 @@ input[type="text"] {
     outline: none;
 }
 
+h1 {
+    margin-top: 10px;
+}
+
 .row {
     display: flex;
     flex-direction: row;
