@@ -149,4 +149,18 @@ h1 {
     background-size: contain;
 }
 
+@media screen and (max-width: 500px) {
+    .betting-table {
+        width: 258px;
+        padding: 10px;
+    }
 
+    #bet-custom {
+        width: 100px;
+    }
+
+    .bet-display,.bankroll-display {
+        margin: 0px auto;
+        width: 340px;
+    }
+}
