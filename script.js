@@ -60,6 +60,7 @@ returnBtn.addEventListener("click", returnBet)
 loseBtn.addEventListener("click", Lose)
 winConfirm.addEventListener("click", customWin)
 startBtn.addEventListener("click", Start)
+document.getElementById("win-close").addEventListener("click", close)
 
 function addBet(id) {
     id = id.replace('bet','');
@@ -120,6 +121,14 @@ function customBet() {
 function Win() {
     document.querySelector(".win-options").style.display = "flex";
     document.querySelector("#win-btn").style.display = "none";
+}
+
+function close() {
+    document.querySelector(".win-options").style.display = "none";
+    document.querySelector("#win-btn").style.display = "inline";
+    win2x.checked = false;
+    win3x.checked = false;
+    document.querySelector("#win-multi").disabled = false;
 }
 
 function winAmount (id) {
