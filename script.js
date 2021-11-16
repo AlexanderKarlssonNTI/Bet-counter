@@ -28,11 +28,14 @@ const betClear = document.getElementById("bet-clear");
 const win2x = document.getElementById("win-2x");
 const win3x = document.getElementById("win-3x");
 const winCustom = document.getElementById("win-custom");
+const winMultiplier = document.getElementById("win-multi");
 const winConfirm = document.getElementById("win-confirm");
 
 const startValue = document.getElementById("start-value");
 const startBtn = document.getElementById("start-btn");
 let start = false;
+let whoCheck1;
+let whoCheck2;
 
 // Betting table event listeners
 bet1.addEventListener("click", function(){addBet(bet1.id)})
@@ -51,8 +54,8 @@ betAll.addEventListener("click", BetAll)
 
 // Actions even listners
 winBtn.addEventListener("click", Win)
-win2x.addEventListener("click", function(){winAmount(win2x.id)})
-win3x.addEventListener("click", function(){winAmount(win3x.id)})
+win2x.addEventListener("click", function(){multiplier(win2x)})
+win3x.addEventListener("click", function(){multiplier(win3x)})
 returnBtn.addEventListener("click", returnBet)
 loseBtn.addEventListener("click", Lose)
 winConfirm.addEventListener("click", customWin)
@@ -89,8 +92,8 @@ function Bet() {
             alert("Error: not enough to bet");
         }
         else {
-            bet.innerHTML = toBet.innerHTML;
-            bankroll.innerHTML = parseInt(bankroll.innerHTML) - parseInt(bet.innerHTML);
+            bet.innerHTML = parseInt(bet.innerHTML) + parseInt(toBet.innerHTML);
+            bankroll.innerHTML = parseInt(bankroll.innerHTML) - parseInt(toBet.innerHTML);
             toBet.innerHTML = 0;
         }
     }
@@ -131,16 +134,62 @@ function winAmount (id) {
 }
 
 function customWin() {
+    let temp1 = null;
+    let temp2 = null;
+    if (win2x.checked == true || win3x.checked == true) {
+        if (whoCheck1 == win2x) {
+            temp1 = 2;
+        }
+        if (whoCheck1 == win3x) {
+            temp1 = 3;
+        }
+    } else if (winMultiplier.value != '' && isNaN(winMultiplier.value) != true && Number.isInteger(parseInt(winMultiplier.value)) == true) {
+        temp1 = winMultiplier.value;
+    }
     if (winCustom.value != '' && isNaN(winCustom.value) != true && Number.isInteger(parseInt(winCustom.value)) == true) {
-        temp = parseInt(bet.innerHTML) * parseInt(winCustom.value);
-        bankroll.innerHTML = parseInt(bankroll.innerHTML) + temp;
+        temp2 = winCustom.value;
+        console.log(temp2);
+    }
+    if (temp1 == null && temp2 == null) {
+        alert("Error: Invalid input");
+    }
+    if (temp1 == null || temp2 == null || temp1 != null || temp2 != null) {
+        if (temp2 == null) {
+            bankroll.innerHTML = parseInt(bankroll.innerHTML) + (parseInt(bet.innerHTML) * temp1);
+        }
+        else if (temp1 == null) {
+            bankroll.innerHTML = parseInt(bankroll.innerHTML) + parseInt(bet.innerHTML) + parseInt(temp2);
+        }
+        else {
+            bankroll.innerHTML = parseInt(bankroll.innerHTML) + parseInt(temp2) + (parseInt(bet.innerHTML)*  temp1);
+        }
         bet.innerHTML = 0;
         document.querySelector(".win-options").style.display = "none";
         document.querySelector("#win-btn").style.display = "inline";
+        win2x.checked = false;
+        win3x.checked = false;
+        document.querySelector("#win-multi").disabled = false;
+    }
+}
+
+function multiplier(temp) {
+    whoCheck1 = temp;
+    if (whoCheck1 != whoCheck2) {
+        if (whoCheck1 == win2x) {
+            win3x.checked = false;
+        }
+        if (whoCheck1 == win3x) {
+            win2x.checked = false;
+        }
+    }
+    whoCheck2 = whoCheck1;
+    if (win2x.checked || win3x.checked) {
+        document.querySelector("#win-multi").disabled = true;
     }
     else {
-        alert("Error: Non integer detected or empty input");
+        document.querySelector("#win-multi").disabled = false;
     }
+
 }
 
 function Start() {

@@ -26,8 +26,8 @@ h1 {
 }
 
 .chip {
-    width: 40px;
-    height: 40px;
+    width: 46px;
+    height: 46px;
     text-align: center;
 }
 
@@ -44,6 +44,7 @@ h1 {
 
 .win-options {
     flex-direction: column;
+    align-content: center;
     background-color: #a3a3a3;
     padding: 10px;
     border: 6px solid rgb(61, 61, 61);
@@ -82,6 +83,10 @@ h1 {
 }
 
 #win-custom {
+    width: 144px;
+}
+
+#win-multi {
     width: 56px;
 }
 
