@@ -9,4 +9,4 @@ Download the repository then open index.html
 * Bet points using the Betting table
 * Play a round of whatever poker game you're playing
 * Depending on if you win or lose/fold select the apropriate button
-- 
+-sdmmwaidma
