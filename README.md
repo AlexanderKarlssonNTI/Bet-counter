@@ -3,3 +3,8 @@ This appliaction is intended to be used for when playing poker games with bettin
 
 # Installation & usage
 Download the repository then open index.html
+
+# Instructions
+* Using the bottom most box, add the amount of starting points desired
+* 
+* 
