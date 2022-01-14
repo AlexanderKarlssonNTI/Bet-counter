@@ -6,5 +6,7 @@ Download the repository then open index.html
 
 # Instructions
 * Using the bottom most box, add the amount of starting points desired
-* 
-* 
+* Bet points using the Betting table
+* Play a round of whatever poker game you're playing
+* Depending on if you win or lose/fold select the apropriate button
+- 
